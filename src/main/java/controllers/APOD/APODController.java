@@ -1,5 +1,6 @@
-package com.tblais.personalAPI;
+package controllers.APOD;
 
+import com.tblais.personalAPI.APOD;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,12 +26,12 @@ public class APODController {
     }
 
     @GetMapping("/apodtest")
-    public String apodTest () {return "APOD TESTING";
+    public String apodTest () {return "controllers.APOD TESTING";
     }
 
     @GetMapping("/adod")
     public String postApod(
             @RequestParam (name = "param", required = false) String requestParm) {
-        return "POST APOD";
+        return "POST controllers.APOD";
     }
 }
