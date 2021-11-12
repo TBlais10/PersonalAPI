@@ -1,6 +1,6 @@
-package models;
+package com.tblais.personalAPI.models;
 
-public class SwapiResponse {
+public class SpeciesResponse {
     private Integer count;
     private String next;
     private Species[] results;

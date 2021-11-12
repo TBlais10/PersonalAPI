@@ -1,7 +1,6 @@
-package controllers.APOD;
+package com.tblais.personalAPI.controllers.APOD;
 
 import com.tblais.personalAPI.APOD;
-import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,11 +9,6 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class APODController {
     private static final String MY_API_KEY = "hF4GZKXvAM5yV5lroYtw7icPcfp297Q8UJn8xgAd";
-
-    @GetMapping ("/")
-    public String rootRoute(){
-        return "Welcome Home.";
-    }
 
     @GetMapping ("/apod")
     public APOD apodInfo (RestTemplate restTemplate) {
@@ -26,12 +20,12 @@ public class APODController {
     }
 
     @GetMapping("/apodtest")
-    public String apodTest () {return "controllers.APOD TESTING";
+    public String apodTest () {return "com.tblais.personalAPI.controllers.APOD TESTING";
     }
 
     @GetMapping("/adod")
     public String postApod(
             @RequestParam (name = "param", required = false) String requestParm) {
-        return "POST controllers.APOD";
+        return "POST com.tblais.personalAPI.controllers.APOD";
     }
 }
